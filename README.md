@@ -33,12 +33,10 @@ For more information, visit the [ADFA-LD official page](https://research.unsw.ed
 Two hybrid models were developed, integrating **Transformers** and **Autoencoders**:
 1. **Model 1**
    - **Accuracy**: 95.29%
-   - **F1-Score**: 0.0374
    - **Description**: This model achieves high accuracy on normal data but struggles with rare anomalies due to class imbalance. It uses a basic Transformer layer followed by an Autoencoder for reconstruction.
    - **Parameters**: 4 Transformer layers, 128 hidden units, 0.001 learning rate.
 2. **Model 2**
    - **Accuracy**: 96.91%
-   - **F1-Score**: 0.0559
    - **Description**: An enhanced version with deeper Transformer layers and a refined Autoencoder. It better balances precision and recall, improving anomaly detection.
    - **Enhancements**: 4 Transformer layers with 8 attention heads, ReLU activation, dropout 0.2, StepLR Scheuling for decreasing learning rate by a factor of 0.5 after every 5 epochs, label smoothing with a smoothing factor of 0.1, dynamic thresholding.
 
