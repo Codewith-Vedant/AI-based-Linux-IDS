@@ -40,39 +40,79 @@ Two hybrid models were developed, integrating **Transformers** and **Autoencoder
    - **Accuracy**: 96.91%
    - **F1-Score**: 0.0559
    - **Description**: An enhanced version with deeper Transformer layers and a refined Autoencoder. It better balances precision and recall, improving anomaly detection.
-   - **Parameters**: 6 Transformer layers, 256 hidden units, dropout 0.1, 0.0005 learning rate.
+   - **Enhancements**: 4 Transformer layers with 8 attention heads, ReLU activation, dropout 0.2, StepLR Scheuling for decreasing learning rate by a factor of 0.5 after every 5 epochs, label smoothing with a smoothing factor of 0.1, dynamic thresholding.
 
-### Model Architecture
-- **Transformer Component**: Multi-head attention captures dependencies in system call sequences.
-- **Autoencoder Component**: Encodes normal behavior into a latent space, reconstructing input; high reconstruction error indicates anomalies.
-- **Training Objective**: Minimize reconstruction loss for normal data while maximizing anomaly detection sensitivity.
+### 🔥 Model Architecture
+
+   -   **Embedding Layer**: Converts system calls into vector representations.
+
+   -   **Positional Encoding**: Adds sequence information.
+
+   -   **Transformer Encoder**: Learns sequence patterns.
+
+   -   **Transformer Decoder**: Tries to reconstruct input.
+
+   -   **Reconstruction Error**: Used to detect anomalies.
+
+   -   **Multi-Head Attention**: Enhances feature extraction.
+
+   -   **Dropout Layers**: Prevents overfitting.
+
+   -   **Layer Normalization**: Stabilizes training.
 
 ### Performance Analysis
 - **Accuracy**: Measures overall correctness but is skewed by the predominance of normal data.
 - **F1-Score**: Balances precision and recall, critical for rare anomaly detection.
 - Model 2 outperforms Model 1, but both F1-scores suggest challenges with imbalanced data.
 
-
-## Setup Instructions
-### Prerequisites
-- **Operating System**: Linux (Ubuntu recommended) or compatible environment.
-- **Python**: 3.8 or higher.
-- **Hardware**: GPU (e.g., NVIDIA) recommended for training; CPU sufficient for inference.
-
-### Installation
+### 🛠 Installation
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/<your-username>/anomaly-detection-linux.git
    cd anomaly-detection-linux
    ```
 
-2. **Install dependencies using Conda**:
+2. **Install dependencies (using Conda)**:
    ```bash
    conda env create -f adfa_env.yml
    conda activate adfa_env
    ```
    
-3. **Install dependencies**:
+3. **Install dependencies(using pip if conda is not installed)**:
    ```bash
    pip install -r requirements.txt
    ```
+
+### 🚀 Future Improvements
+
+   - Implement Dynamic Thresholding based on statistical methods.
+
+   - Experiment with LSTM & GRU Models to compare performance.
+
+   - Extend dataset for better generalization across multiple attack types.
+
+   - Optimize training with Hyperparameter Tuning.
+
+   - Deploy a Real-time Anomaly Detection System using Flask or FastAPI.
+
+   - Integrate Explainability Techniques to interpret model decisions.
+
+### 🏆 Contributing
+
+## We welcome contributions! To get started:
+
+   - Fork the repository.
+
+   - Create a new branch (git checkout -b feature-branch).
+
+   - Commit changes (git commit -m "Added new feature").
+
+   - Push to the branch (git push origin feature-branch).
+
+   - Open a Pull Request.
+
+### License
+This project is licensed under the  [BSD 3-Clause "New" or "Revised" License](LICENSE).
+
+### Contact
+For questions or collaboration, reach out via GitHub Issues or email <thack7010@duck.com>.

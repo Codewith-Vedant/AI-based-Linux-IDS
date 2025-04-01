@@ -1,3 +1,2 @@
-./model.pth
-./enhanced_transformer_autoencoder.pth
-./IS.ipynb
+model.pth
+enhanced_transformer_autoencoder.pth
