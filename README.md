@@ -87,8 +87,6 @@ Two hybrid models were developed, integrating **Transformers** and **Autoencoder
 
    - Implement Dynamic Thresholding based on statistical methods.
 
-   - Experiment with LSTM & GRU Models to compare performance.
-
    - Extend dataset for better generalization across multiple attack types.
 
    - Optimize training with Hyperparameter Tuning.
