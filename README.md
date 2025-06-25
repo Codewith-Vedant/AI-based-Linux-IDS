@@ -66,7 +66,7 @@ Two hybrid models were developed, integrating **Transformers** and **Autoencoder
 ### 🛠 Installation
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/<your-username>/anomaly-detection-linux.git
+   git clone https://github.com/Codewith-Vedant/AI-based-Linux-IDS
    cd anomaly-detection-linux
    ```
 
