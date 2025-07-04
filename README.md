@@ -108,7 +108,7 @@ Two hybrid models were developed, integrating **Transformers** and **Autoencoder
    - Open a Pull Request.
 
 ### License
-This project is licensed under the  [BSD 3-Clause "New" or "Revised" License](LICENSE).
+This project is licensed under the  [MIT License](LICENSE).
 
 ### Contact
 For questions or collaboration, reach out via GitHub Issues or email <thack7010@duck.com>.
